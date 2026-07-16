@@ -1,0 +1,7 @@
+{
+  "bundle": "t001_parse_remittance_report",
+  "source_file": "utl-altair-slc-extract-key-data-from-a-very-messy-participation-text-report.sas",
+  "source_blob_sha": "ed9bcccc46dcd0c82e8e6be913f4cfb3a76b16cc",
+  "source_commit": "794484bfc6128cf541f600a70674f24d610675a0",
+  "notes": "Original DATA step parses a fixed-width 'Participant Consolidation of Remittance Report' text file via INFILE \"d:\\txt\\RemittanceReport.txt\" (a local Windows path, not portable). Parse logic (retain partic; substr/scan/index extraction of PARTICIPATION %, PAID/DUE dates, SERVICE FEE) is byte-identical to the source. Substitution: the INFILE was changed to INFILE DATALINES and fed a slice of the report text captured verbatim from the repo's own README/source (two consolidation blocks, participation 90%) plus two additional synthetic rows in a third block (participation 75%, one positive and one negative SERVICE FEE) built in the exact fixed-width column layout so the not-90%-participation branch of query 3 and the NEG/POS branches of the PROC FREQ format both get exercised — the original 5801-row file only ever showed a single 90% participation value in the snippet available off-repo. PROC FORMAT/PROC FREQ and both PROC SQL queries (participation != 90, due date > paid date) are unmodified from source, just pointed at libname-free WORK.parse instead of workx.parse."
+}
