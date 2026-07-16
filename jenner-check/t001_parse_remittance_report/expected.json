@@ -1,0 +1,14 @@
+{
+  "_captured_at": "2026-07-16T04:12:00Z",
+  "_captured_run_id": "r_18a332fba92d4ef69d68d2852c654744",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: Processing inline DATALINES (50 lines)",
+    "NOTE: Wrote parse (4 rows, 4 columns).",
+    "NOTE: FORMAT num2mis defined (5 ranges).",
+    "NOTE: PROC PRINT completed: 4 observations printed, 4 variables"
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}
